@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Persona</h1>
+    <ul>
+       <li>{{mario.nombre}}</li> <!--objeto y su propiedad-->
+       <li>{{mario.apellido}}</li> <!--objeto y su propiedad-->
+       <li>{{mario.edad()}}</li><!--objeto y metodo edad()-->
+    </ul>
+    <h1>Estudiante</h1>
+    <ul>
+       <li>{{julia.nombre}}</li> <!--objeto y su propiedad-->
+       <li>{{julia.apellido}}</li> <!--objeto y su propiedad-->
+       <li>{{julia.edad()}}</li><!--objeto y metodo edad()-->
+    </ul>
+    
+    <h1>Enviar Mensaje</h1>
+        <form method="POST" action="/">
+            {{ form.csrf_token }}
+            <li>{{ form.mail.label}} {{ form.mail(size=20)}}</li>
+            <li>{{ form.name.label }} {{ form.name(size=20) }}</li>
+            <li>{{ form.text.label }} {{ form.text(size=200) }}</li>
+            <input type="submit" value="Go">
+        </form>
+   
+ 
+</body>
+</html>
